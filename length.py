@@ -10,13 +10,10 @@ data = []
 
 for x in range(0, 16):
    url = ('https://www.ntia.doc.gov/grants-combined?page=%d' % (x))
-   #print('https://www.ntia.doc.gov/grants-combined?page=%d' % (x))
 
    response = requests.get(url)
    html = response.content
-
    soup = BeautifulSoup(html, 'lxml')
-
    grants = soup.findAll("div", class_="ntia_content_title")
     
    len(grants)
