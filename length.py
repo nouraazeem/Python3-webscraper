@@ -25,3 +25,8 @@ for x in range(0, 16):
    for grant in grants: 
       print(grant.next.contents[0])
 len(data)
+
+outfile = open("./Broadband Grants.csv", "w")
+writer = csv.writer(outfile)
+writer.writerow (['Grant names'])
+writer.writerows(grant.next.contents[0])
